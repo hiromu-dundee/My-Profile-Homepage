@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+body {
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #f3f6ff;
+    background: #080b14;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    padding-inline: clamp(16px, 4vw, 56px);
+}
+
+.hero {
+    width: 100%;
+    background: linear-gradient(130deg, #111a36, #1f2b59 45%, #121a35);
+    color: #fff;
+    padding: 96px 0 72px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #27335f;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.15rem);
+    color: #dbe4ff;
+}
+
+.sections {
+    display: grid;
+    gap: 28px;
+    padding-bottom: 56px;
+}
+
+.card {
+    width: 100%;
+    background: #111827;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #24314f;
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
+    min-height: 260px;
+}
+
+.card.reverse .visual {
+    order: 2;
+}
+
+.card.reverse .content {
+    order: 1;
+}
+
+.visual {
+    position: relative;
+}
+
+.visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.label {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    background: rgba(8, 11, 20, 0.78);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.content h2 {
+    font-size: 1.45rem;
+    color: #f7f9ff;
+}
+
+.content p {
+    color: #c6d1ee;
+    font-size: 0.98rem;
+}
+
+.content a {
+    width: fit-content;
+    margin-top: 8px;
+    text-decoration: none;
+    background: #4f7cff;
+    color: #f7fbff;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: opacity 0.2s;
+}
+
+.content a:hover {
+    opacity: 0.92;
+}
+
+footer {
+    padding: 24px 0 36px;
+    text-align: center;
+    color: #9cabd3;
+    font-size: 0.9rem;
+    border-top: 1px solid #1f2945;
+}
+
+@media (max-width: 800px) {
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .card.reverse .visual,
+    .card.reverse .content {
+        order: initial;
+    }
+
+    .visual {
+        min-height: 200px;
+    }
+}
+
+.detail-main {
+    width: 100%;
+    padding: 20px clamp(16px, 4vw, 56px) 60px;
+}
+
+.detail-card {
+    background: #10182b;
+    border: 1px solid #26365e;
+    border-radius: 16px;
+    padding: clamp(18px, 3vw, 32px);
+}
+
+.detail-card h2 {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    margin-bottom: 14px;
+}
+
+.detail-card p {
+    color: #cfdaff;
+    margin-bottom: 14px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 12px;
+    text-decoration: none;
+    color: #9ec1ff;
+    font-weight: 700;
+}
