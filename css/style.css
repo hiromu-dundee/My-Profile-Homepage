@@ -22,6 +22,26 @@ body {
     border-bottom: 1px solid #27335f;
 }
 
+.hero--home {
+    min-height: 52vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.hero-intro {
+    opacity: 0;
+    filter: blur(16px);
+    transform: translateY(26px) scale(0.98);
+    transition: opacity 0.9s ease, filter 1s ease, transform 1s ease;
+}
+
+.hero-intro.is-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+}
+
 .hero h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 10px;
@@ -89,6 +109,31 @@ body {
     gap: 10px;
 }
 
+.reveal-text,
+.reveal-image {
+    opacity: 0;
+    transition: transform 0.85s ease, opacity 0.85s ease;
+    will-change: transform, opacity;
+}
+
+.reveal-text {
+    transform: translateY(30px);
+}
+
+.reveal-image {
+    transform: translateX(-46px);
+}
+
+.card.reverse .reveal-image {
+    transform: translateX(46px);
+}
+
+.reveal-text.in-view,
+.reveal-image.in-view {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 .content h2 {
     font-size: 1.45rem;
     color: #f7f9ff;
@@ -109,10 +154,6 @@ body {
     border-radius: 8px;
     font-weight: 700;
     transition: opacity 0.2s;
-}
-
-.content a:hover {
-    opacity: 0.92;
 }
 
 footer {

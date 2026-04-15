@@ -7,6 +7,7 @@
     <title>深層学習 | Portfolio</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/deep-learning.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -18,10 +19,28 @@
     </header>
     <main class="detail-main">
         <section class="detail-card">
-            <h2>現在の研究内容</h2>
-            <p>画像認識と生成モデルを中心に、モデルの精度向上と学習効率の改善を目的とした研究に取り組んでいます。</p>
-            <p>実験ではデータ前処理、ハイパーパラメータ調整、結果分析まで一連の流れを重視し、再現性の高い検証を目指しています。</p>
-            <p>今後は実社会の課題に適用可能なモデル設計や、説明可能性の向上にも挑戦していく予定です。</p>
+            <h2>アンサンブル学習の概要</h2>
+            <p>複数のモデルを組み合わせるアンサンブル学習により、単体モデルより安定した予測と精度向上を目指しています。特に、各モデルの誤り傾向が重ならないように設計し、多様性を維持しつつ精度向上を実現する点を重視しています。</p>
+            <p>蒸留と特徴マップ操作を通じて、各モデルの精度や最終的なアンサンブル精度、多様性指標を検討しながら実験を行っています。評価では、個別精度だけでなく相関や多様性メトリクスを併用し、バランスの良い構成を探索しています。</p>
+            <p>最終的には、少ない計算資源でも高い性能を維持できる構成を目標に、効率性と汎化性能の両立を目指しています。</p>
+        </section>
+
+        <section class="detail-card dl-visual-card">
+            <h2>研究イメージ</h2>
+            <div class="dl-grid">
+                <figure class="dl-item">
+                    <img src="images/NeuralNetwork.png" alt="NeuralNetwork.png">
+                    <figcaption>ニューラルネットワーク</figcaption>
+                </figure>
+                <figure class="dl-item">
+                    <img src="images/deep_learning_neural_network_ensemble_learning_20260415134040_01.png" alt="deep_learning_neural_network_ensemble_learning_20260415134040_01.png">
+                    <figcaption>研究テーマである複数のAIを組み合わせるアンサンブル学習</figcaption>
+                </figure>
+                <figure class="dl-item">
+                    <img src="images/Id_like_you_to_create_an_image_that_evokes_deep_learning_and_artificial_intell_20260415133350_02.png" alt="Id_like_you_to_create_an_image_that_evokes_deep_learning_and_artificial_intell_20260415133350_02.png">
+                    <figcaption>人工知能のイメージ</figcaption>
+                </figure>
+            </div>
             <a class="back-link" href="index.html">トップページへ戻る</a>
         </section>
     </main>
