@@ -23,6 +23,12 @@
     aspect-ratio: 4 / 3;
     object-fit: cover;
     display: block;
+    cursor: pointer;
+    transition:.5s;
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
 }
 
 .image-item figcaption {
@@ -50,4 +56,56 @@ figcaption {
 .back-link:hover {
     color:white;
     background:#4f7cff;
+}
+
+.image-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(3, 6, 14, 0.82);
+    z-index: 1200;
+}
+
+.image-modal.is-open {
+    display: flex;
+}
+
+.image-modal-content {
+    position: relative;
+    max-width: min(95vw, 1300px);
+    max-height: 90vh;
+}
+
+.image-modal-content img {
+    width: auto;
+    max-width: 100%;
+    max-height: 90vh;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.48);
+    border:3px solid white;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 42px;
+    height: 42px;
+    border: 1px solid white;
+    border-radius: 999px;
+    background: rgba(7, 12, 29, 0.92);
+    color: #f2f6ff;
+    font-size: 1.7rem;
+    line-height: 1;
+    cursor: pointer;
+    transition:.2s;
+}
+
+.image-modal-close:hover {
+    background: rgba(38, 57, 110, 0.95);
 }
