@@ -3,6 +3,37 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!galleryImages.length) {
         return;
     }
+    const heroMarqueeTrack = document.querySelector(".hero-marquee-track");
+
+    const shuffleArray = (array) => {
+        const copied = [...array];
+        for (let i = copied.length - 1; i > 0; i -= 1) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [copied[i], copied[j]] = [copied[j], copied[i]];
+        }
+        return copied;
+    };
+
+    if (heroMarqueeTrack) {
+        const marqueeSources = shuffleArray(
+            [...galleryImages].map((image) => ({
+                src: image.src,
+                alt: image.alt
+            }))
+        );
+        const loopSources = [...marqueeSources, ...marqueeSources];
+        const fragment = document.createDocumentFragment();
+
+        loopSources.forEach((slide) => {
+            const imageElement = document.createElement("img");
+            imageElement.className = "hero-marquee-item";
+            imageElement.src = slide.src;
+            imageElement.alt = `${slide.alt} のスライド表示`;
+            fragment.appendChild(imageElement);
+        });
+
+        heroMarqueeTrack.appendChild(fragment);
+    }
 
     const modal = document.createElement("div");
     modal.className = "image-modal";
