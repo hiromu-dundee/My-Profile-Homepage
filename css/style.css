@@ -153,7 +153,12 @@ body {
     padding: 8px 14px;
     border-radius: 8px;
     font-weight: 700;
-    transition: opacity 0.2s;
+    transition:.5s;
+    /* transition: opacity 0.2s; */
+}
+
+.content a:hover {
+    background-color:#00aeff;
 }
 
 footer {
