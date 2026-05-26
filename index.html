@@ -7,10 +7,13 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <script src="js/script.js" defer></script>
+    <script src="js/index-effects.js" defer></script>
 </head>
 <body>
     <header class="hero hero--home">
+        <canvas class="hero-effect-canvas" aria-hidden="true"></canvas>
         <div class="container hero-intro">
             <h1>山田 太郎(仮名) | Portfolio</h1>
             <p>??大学 ??研究科 / 深層学習を中心に研究中</p>
@@ -22,6 +25,7 @@
         <section class="sections">
             <article class="card">
                 <div class="visual reveal-image">
+                    <canvas class="visual-effect-canvas" data-effect="neural-network" aria-hidden="true"></canvas>
                     <img src="images/NeuralNetwork.png" alt="深層学習のイメージ">
                     <p class="label">Deep Learning</p>
                 </div>
@@ -34,6 +38,7 @@
 
             <article class="card reverse">
                 <div class="visual reveal-image">
+                    <canvas class="visual-effect-canvas" data-effect="wireframe" aria-hidden="true"></canvas>
                     <img src="https://picsum.photos/800/500?random=21" alt="CG作成のイメージ">
                     <p class="label">Computer Graphics</p>
                 </div>
@@ -46,6 +51,7 @@
 
             <article class="card">
                 <div class="visual reveal-image">
+                    <canvas class="visual-effect-canvas" data-effect="code-flow" aria-hidden="true"></canvas>
                     <img src="https://picsum.photos/800/500?random=31" alt="プログラミングのイメージ">
                     <p class="label">Programming</p>
                 </div>
@@ -58,6 +64,7 @@
 
             <article class="card reverse">
                 <div class="visual reveal-image">
+                    <canvas class="visual-effect-canvas" data-effect="timeline-wave" aria-hidden="true"></canvas>
                     <img src="https://picsum.photos/800/500?random=41" alt="動画編集のイメージ">
                     <p class="label">Video Editing</p>
                 </div>
@@ -70,6 +77,7 @@
 
             <article class="card">
                 <div class="visual reveal-image">
+                    <canvas class="visual-effect-canvas" data-effect="life-path" aria-hidden="true"></canvas>
                     <img src="https://picsum.photos/800/500?random=51" alt="生い立ちのイメージ">
                     <p class="label">Background</p>
                 </div>
